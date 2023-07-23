@@ -5842,6 +5842,17 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 		natDexTier: "RUBL",
 	},
+	hatchlivy:{
+		tier: "LC",
+	},
+    komodlora:{
+		tier: "NFE",
+	},
+	wickemodo:{
+		tier: "OU",
+		doublesTier: "DOU",
+		natDexTier: "OU",
+	},
 	missingno: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

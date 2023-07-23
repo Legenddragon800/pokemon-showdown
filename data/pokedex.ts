@@ -18037,6 +18037,41 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		tags: ["Paradox"],
 		eggGroups: ["Undiscovered"],
 	},
+	hatchlivy: {
+		num: 1011,
+		name: "hatchlivy",
+		types: ["Grass"],
+		baseStats: {hp:50, atk:65, def:40, spa:65, spd:40, spe:50},
+		abilities: {0: "Overgrow", H: "Corrosive Fangs"},
+		heightm: 0.4,
+		weightkg: 0.1,
+		color: "Green",
+	    evos: ["Komodlora"],
+		eggGroups: ["Monster", "Grass"]
+	},
+	komodlora: {
+		num: 1012,
+		name: "komodlora",
+		types: ["Grass"],
+		baseStats: {hp:65, atk:85, def:60, spa:85, spd:60, spe:50},
+		abilities: {0: "Overgrow", H: "Corrosive Fangs"},
+		heightm: 1.4,
+		weightkg: 70,
+		color: "Green",
+		evos: ["Wickemodo"],
+		eggGroups: ["Monster", "Grass"]
+	},
+	Wickemodo: {
+		num: 1013,
+		name: "Wickemodo",
+        types: ["Grass", "Dark"],
+		baseStats: {hp:100, atk:125, def:80, spa:105, spd:70, spe:60},
+		abilities: {0: "Overgrow", H: "Corrosive Fangs"},
+		heightm: 3.13,
+		weightkg: 166,
+		color: "Green",
+		eggGroups: ["Monster", "Grass"]
+	},
 	missingno: {
 		num: 0,
 		name: "MissingNo.",

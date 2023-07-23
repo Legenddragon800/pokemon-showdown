@@ -5212,4 +5212,92 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -4,
 	},
+	corrosivefangs: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('Corrosive Fangs boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('Corrosive Fangs boost');
+				return this.chainModify(1.5);
+
+			}
+		},
+		onModifyTypePriority: -1,
+	    onModifyType(move, pokemon) {
+					const noModifyType = [
+						'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+					];
+					if (move.type === 'Poison' && !noModifyType.includes(move.id) &&
+						!(move.isZ && move.category !== 'Status')) {
+						move.type = 'Acid';
+			}
+		},
+		name: "Corrosive Fangs",
+		rating: 3.5,
+		num: 299,
+	},
+	DraconianOrigins: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Dragon') {
+				this.debug('Draconian Origins boost');
+				return this.chainModify(1.5);
+				}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Dragon') {
+				this.debug('Draconion Origins boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyTypePriority: -1,
+	    onModifyType(move, pokemon) {
+					const noModifyType = [
+						'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+					];
+					if (move.type === 'Dragon' && !noModifyType.includes(move.id) &&
+						!(move.isZ && move.category !== 'Status')) {
+						move.type = 'Drake';
+				}
+		},
+		name: "Draconian Origins",
+		rating: 3.5,
+		num: 300,
+	},
+	Cumulonimbus: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Cumulonimbus boost');
+				return this.chainModify(1.5);
+				}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Cumulonimbus boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyTypePriority: -1,
+	    onModifyType(move, pokemon) {
+					const noModifyType = [
+						'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+					];
+					if (move.type === 'Electric' && !noModifyType.includes(move.id) &&
+						!(move.isZ && move.category !== 'Status')) {
+						move.type = 'Lightning';
+				}
+		},
+		name: "Cumulonimbus",
+		rating: 3.5,
+		num: 301,
+	},
 };

@@ -13658,14 +13658,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 	poisonfang: {
 		num: 305,
 		accuracy: 100,
-		basePower: 50,
+		basePower: 80,
 		category: "Physical",
 		name: "Poison Fang",
 		pp: 15,
 		priority: 0,
 		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 		secondary: {
-			chance: 50,
+			chance: 20,
 			status: 'tox',
 		},
 		target: "normal",
